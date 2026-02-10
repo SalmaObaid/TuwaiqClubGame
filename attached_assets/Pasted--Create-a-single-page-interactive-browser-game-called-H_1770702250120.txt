@@ -1,0 +1,99 @@
+)
+
+Create a single-page interactive browser game called "Hit at 10 – Perfect Timing" for a girls’ event at Tuwaig Academy Club. Only the Tuwaig Club logo SVG should be uploaded by the user; all other assets (sounds, confetti, styling) should be handled within the project.
+
+Requirements:
+
+Multi-Screen Flow:
+
+Home Screen:
+
+Title: "Tuwaiq Game 🕹️" (bold, modern, clear font)
+
+Tuwaig Club logo (SVG) above the title
+
+"Start Game" button that navigates to the Game Screen
+
+Game Screen:
+
+Large clickable Tuwaig Club logo (SVG) centered
+
+Timer at top in format 00:00:00 (minutes:seconds:milliseconds, 2 digits only)
+
+Timer starts at 0.00 when "Start" is pressed
+
+Timer runs up to 15 seconds or until logo is clicked
+
+Optional: logo glows or changes color briefly near 10 seconds; progress bar under timer
+
+Result Screen:
+
+Shows result based on click accuracy:
+
+Perfect hit (±50ms of 10.00s): confetti animation, large message "🎉 Congratulations! Perfect Timing! 🎉", 2-second follow-up message "⏱️ Try again to improve your speed and accuracy! 🚀", and celebratory sound
+
+Missed hit: message "😅 So close! Try to focus more ⏳" with "Try Again" button
+
+Small text below: "📌 Precision and focus are key parts of technical thinking, just like we train at Tuwaig Academy"
+
+Buttons for Home or Replay Game
+
+Gameplay Logic:
+
+Player must click the logo exactly at 10.00 seconds
+
+Calculate difference between click time and 10.00
+
+Trigger messages, animations, and sound based on accuracy
+
+Handle timer, click events, confetti, sound, messages, and navigation with JavaScript
+
+Design & Styling:
+
+Background: simple and clean (light purple or white)
+
+Logo prominent and centered
+
+Titles bold and slightly larger than normal text
+
+Use modern, readable fonts suitable for girls; not overly decorative
+
+Buttons and messages consistent with theme
+
+Include confetti and glow effects using JS or CSS
+
+Technical Requirements:
+
+HTML: Home, Game, and Result sections
+
+CSS: styling, animations, buttons, messages
+
+JavaScript: timer with 2-digit milliseconds, click detection, screen navigation, result calculation, confetti, and sound
+
+Assets to Include:
+
+Tuwaig Club Logo SVG (uploaded by user)
+
+Confetti library or animated GIF
+
+Celebratory MP3 sound
+
+Apple Emojis in all messages
+
+Expected Output:
+
+Fully functional single-page game with logical flow: Home → Game → Result → Home/Replay
+
+Timer with millisecond precision (2 digits)
+
+Clickable logo for target timing
+
+Visual/audio feedback for perfect hits
+
+Encouraging messages for misses
+
+Replayable multiple times
+
+Clean, appealing design suitable for girls’ event
+
+Bold, modern titles and readable text

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Feminine but technical purple theme */
+  --background: 280 30% 96%;     /* Very light purple #F8F5FA */
+  --foreground: 270 50% 15%;     /* Dark deep purple */
+  
+  --primary: 270 70% 60%;        /* Vibrant purple */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 280 60% 92%;      /* Soft lavender */
+  --secondary-foreground: 270 60% 30%;
+  
+  --accent: 300 80% 65%;         /* Pinkish/Magenta accent */
+  --accent-foreground: 0 0% 100%;
+  
+  --muted: 270 20% 90%;
+  --muted-foreground: 270 20% 40%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 270 20% 85%;
+  --input: 270 20% 90%;
+  --ring: 270 70% 60%;
+  
+  --radius: 1rem;
+  
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: var(--font-sans);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(280, 80%, 90%, 0.5) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(300, 80%, 90%, 0.5) 0px, transparent 50%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/50 shadow-xl shadow-purple-900/5;
+  }
+  
+  .digital-font {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
