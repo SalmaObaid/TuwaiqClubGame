@@ -30,5 +30,17 @@ export async function registerRoutes(
     res.json(results);
   });
 
+  app.get("/api/admin-all-results", async (req, res) => {
+    try {
+      const allResults = await storage.getLatestResults(100);
+      res.json(allResults);
+    } catch (err) {
+      res.status(500).json({ 
+        message: "Error fetching database records",
+        error: err instanceof Error ? err.message : String(err)
+      });
+    }
+  });
+
   return httpServer;
 }
